@@ -1,0 +1,66 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    @include set-padding(all, 0);
+    @include set-margin(all, 0);
+    font-family: 'Reem Kufi', 'sans-serif', 'helvetica';
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.parallax-container {
+    min-height: auto;
+    border-top: 5px solid $blue;
+}
+
+.parallax-padding {
+    @include set-padding(top, 50px);
+    @include set-padding(bottom, 50px);
+}
+
+.height-100 {
+    height: 100vh;
+}
+
+.no-margin {
+    @include set-margin(all, 0);
+}
+
+.no-padding {
+    @include set-padding(all, 0);
+}
+
+.no-border {
+    border: none;
+}
+
+.padding-20 {
+    @include set-padding(all, 20px);
+}
+
+.page-title-container {
+    display: inline-block;
+    height: 65px;
+}
+
+.background-opaque-blue {
+    @include opaque-background(blue, 0.7);
+}
+
+/* Typography */
+
+.white-text {
+    color: $white;
+}
+
+.font-reem-kufi {
+    font-family: 'Reem Kufi', 'sans-serif', 'helvetica';
+}

@@ -1,0 +1,442 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+@import "partials/mixins";
+@import "partials/base";
+
+/* Homepage */
+
+.site-logo {
+    @include set-margin(top, 50px);
+}
+
+.homepage-quote-container {
+    position: absolute;
+    top: 55%;
+    @include transform(translateY(-50%));
+    @include set-absolute-center();
+}
+
+.homepage-quote {
+    font-size: 50px;
+}
+
+.homepage-quote-inner {
+    display: inline-block;
+}
+
+.homepage-quote-credit {
+    font-size: 20px;
+}
+
+.homepage-next-page {
+    position: absolute;
+    bottom: 50px;
+    font-size: 100px;
+    height: 90px;
+    @include set-absolute-center();
+}
+
+.homepage-next-page i {
+    cursor: pointer;
+    @include opacity(0.5);
+
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .homepage-parallax-container {
+        max-height: 100vh;
+    }
+}
+
+/* About */
+
+.about-me-content {
+    text-align: justify;
+    @include set-margin(top, 50px);
+}
+
+.skills-container {
+    @include set-margin(top, 50px);
+}
+
+.skills-image {
+    height: 75px;
+    @include set-margin(top, 20px);
+    @include set-margin(left, 10px);
+    @include set-margin(right, 10px);
+}
+
+.about-next-page {
+    font-size: 100px;
+    height: 90px;
+}
+
+.about-next-page i {
+    cursor: pointer;
+    @include opacity(0.5);
+
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .skills-image {
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .skills-image {
+        height: 45px;
+    }
+}
+
+/* Portfolio */
+
+.slick-slider-image {
+    width: 100%;
+}
+
+.portfolio-slick-slider-outer {
+    position: relative;
+    @include set-margin(top, 50px);
+    @include set-padding(top, 20px);
+    @include set-padding(bottom, 20px);
+}
+
+.portfolio-slick-slider {
+    @include set-padding(left, 75px);
+    @include set-padding(right, 75px);
+}
+
+.arrow-container-inner {
+    position: relative;
+}
+
+.arrow-container, .arrow-inner {
+    width: 75px;
+    height: 100%;
+}
+
+.arrow-container {
+    position: absolute;
+    top: 0;
+    font-size: 75px;
+    z-index: 1;
+}
+
+.previous-arrow-container {
+    left: 0;
+}
+
+.next-arrow-container {
+    right: 0;
+}
+
+.arrow-container i {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    @include set-absolute-center();
+    @include opacity(0.5);
+
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+.slick-slide-container {
+    outline: none;
+}
+
+.slick-slide-inner {
+    position: relative;
+}
+
+.slick-slide-hover-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    @include opaque-background(black, 0.8);
+    @include set-padding(all, 50px);
+}
+
+.slick-slide-hover-overlay h2 {
+    @include set-margin(bottom, 50px);
+}
+
+.slick-dots {
+    display: block;
+    padding: 0;
+    text-align: center;
+    @include set-padding(top, 20px);
+    @include set-margin(all, 0);
+}
+
+.slick-dots li {
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    @include set-margin(top, 5px);
+}
+
+.slick-dots li button {
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    color: transparent;
+    outline: none;
+    @include opacity(0.5);
+
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+.slick-dots .slick-active button {
+    @include opacity(1);
+}
+
+.portfolio-next-page {
+    font-size: 100px;
+    height: 90px;
+}
+
+.portfolio-next-page i {
+    cursor: pointer;
+    @include opacity(0.5);
+
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .slick-slide-hover-overlay {
+        @include set-padding(all, 25px);
+    }
+
+    .slick-slide-hover-overlay h2 {
+        @include set-margin(top, 0);
+        @include set-margin(bottom, 25px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-portfolio-description {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio-slick-slider {
+        @include set-padding(left, 20px);
+        @include set-padding(right, 20px);
+    }
+
+    .arrow-container {
+        display: none !important;
+    }
+
+    .slick-slide-hover-overlay {
+        display: none !important;
+    }
+
+    .mobile-portfolio-description {
+        display: block;
+    }
+
+    .mobile-portfolio-description * {
+        text-align: left;
+    }
+
+    .mobile-portfolio-description h2 {
+        @include set-margin(top, 30px);
+        @include set-margin(bottom, 30px);
+    }
+
+    .slick-dots li {
+        @include set-margin(left, 5px);
+        @include set-margin(right, 5px);
+    }
+
+    .slick-dots li button {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Services */
+
+.services-container {
+    @include set-padding(top, 50px);
+    @include set-padding(left, 0);
+    @include set-padding(right, 0);
+}
+
+.service-container:first-child {
+    @include set-padding(left, 0);
+    @include set-padding(right, 30px);
+}
+
+.service-container:last-child {
+    @include set-padding(right, 0);
+    @include set-padding(left, 30px);
+}
+
+.service-inner {
+    min-height: 480px;
+    @include set-padding(all, 20px);
+}
+
+.service-inner .dashicons-before,
+.service-inner .dashicons-before:before {
+    width: 70px;
+    height: 70px;
+}
+
+.service-inner .dashicons-before:before {
+    font-size: 70px;
+}
+
+.services-description {
+    @include set-padding(top, 20px);
+}
+
+.services-next-page {
+    font-size: 100px;
+    height: 90px;
+}
+
+.services-next-page i {
+    cursor: pointer;
+    @include opacity(0.5);
+
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .service-inner {
+        min-height: 520px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .service-container {
+        padding: 0 !important;
+    }
+
+    .service-inner {
+        min-height: 200px;
+        @include set-margin(bottom, 20px);
+    }
+
+    .services-next-page {
+        @include set-margin(top, -20px);
+    }
+}
+
+/* Contact */
+
+.contact-container {
+    @include set-margin(top, 20px);
+}
+
+.contact-inner {
+    @include set-padding(all, 20px);
+}
+
+.wpcf7-form label {
+    width: 50%;
+}
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #000;
+    resize: none;
+    @include set-padding(all, 5px);
+    @include set-margin(top, 10px);
+}
+
+.wpcf7-submit {
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 50%;
+    @include set-padding(all, 10px 50px);
+}
+
+span.wpcf7-not-valid-tip {
+    color: $error_red;
+    @include set-margin(top, 5px);
+    @include set-margin(bottom, 10px);
+}
+
+div.wpcf7 .ajax-loader {
+    display: none;
+}
+
+div.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+    border: none;
+    background: $error_red;
+    width: 50%;
+    @include set-padding(all, 10px);
+    @include set-margin(all, 0 auto);
+    @include set-margin(top, 30px);
+}
+
+.wpcf7-mail-sent-ng {
+    border: none !important;
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+    padding: 10px !important;
+}
+
+.required-asterisk {
+    color: $error_red;
+}
+
+.wpcf7-mail-sent-ok {
+    background: #4CAF50;
+    border: none !important;
+    padding: 10px !important;
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+    width: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+    .wpcf7-form label,
+    .wpcf7-submit,
+    div.wpcf7-validation-errors,
+    .wpcf7-mail-sent-ng {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .skills-image {
+        height: 60px;
+    }
+}

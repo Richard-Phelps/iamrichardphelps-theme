@@ -1,0 +1,44 @@
+@mixin set-padding ($position, $pixels) {
+    @if ($position == all) {
+        padding: $pixels;
+    } @else if ($position == top) {
+        padding-top: $pixels;
+    } @else if ($position == right) {
+        padding-right: $pixels;
+    } @else if ($position == bottom) {
+        padding-bottom: $pixels;
+    } @else if ($position == left) {
+        padding-left: $pixels;
+    }
+}
+
+@mixin set-margin ($position, $pixels) {
+    @if ($position == all) {
+        margin: $pixels;
+    } @else if ($position == top) {
+        margin-top: $pixels;
+    } @else if ($position == right) {
+        margin-right: $pixels;
+    } @else if ($position == bottom) {
+        margin-bottom: $pixels;
+    } @else if ($position == left) {
+        margin-left: $pixels;
+    }
+}
+
+@mixin set-absolute-center () {
+    left: 0;
+    right: 0;
+}
+
+@mixin opaque-background ($colour, $opacity) {
+    @if ($colour == blue) {
+        background-color: rgba(13, 71, 161, $opacity);
+        background: rgba(13, 71, 161, $opacity);
+        color: rgba(13, 71, 161, $opacity);
+    } @else if ($colour == black) {
+        background-color: rgba(0, 0, 0, $opacity);
+        background: rgba(0, 0, 0, $opacity);
+        color: rgba(0, 0, 0, $opacity);
+    }
+}
